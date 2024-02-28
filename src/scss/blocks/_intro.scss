@@ -1,0 +1,102 @@
+.intro {
+	background: url("../img/intro-bg.png") center/contain no-repeat;
+	padding: 130px 0 100px;
+
+	&__title {
+		position: relative;
+		font: {
+			size: 42px;
+			weight: 400;
+		}
+		padding-bottom: 37px;
+
+		&::after {
+			position: absolute;
+			content: "";
+			bottom: 0;
+			left: 0;
+			width: 82px;
+			height: 3px;
+			background-color: $color-default-white;
+		}
+
+		&--colored {
+			font: {
+				weight: 800;
+				size: 70px;
+			}
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background: url("../img/intro-text-bg.png") no-repeat center/cover;
+			background-clip: text;
+		}
+	}
+
+	&__text {
+		font-family: $ff-montserrat;
+		font-size: 24px;
+		font-weight: 300;
+		margin-top: 40px;
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		color: $color-default-white;
+		text-transform: uppercase;
+		transition: 0.3s;
+		margin-top: 55px;
+
+		@include hover {
+			&:hover {
+				color: $color-bodger-blue;
+
+				.button:after {
+					right: 5px;
+				}
+			}
+		}
+
+		.button {
+			margin-left: 50px;
+		}
+	}
+
+	@media (max-width: $lg) {
+		&__title {
+			font-size: 38px;
+
+			&--colored {
+				font-size: 60px;
+			}
+		}
+
+		&__text {
+			font-size: 20px
+		}
+
+		&__btn {
+			font-size: 16px;
+		}
+	}
+
+	@media (max-width: $md) {
+		&__title {
+			font-size: 24px;
+
+			&--colored {
+				font-size: 29px;
+			}
+		}
+
+		&__text {
+			font-size: 15px
+		}
+
+		&__btn {
+			font-size: 17px;
+			margin-top: 30px
+		}
+	}
+}

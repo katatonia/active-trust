@@ -1,0 +1,81 @@
+.about {
+	padding: 100px 0;
+
+	&__text-content {
+		p {
+			font: {
+				family: $ff-montserrat;
+				size: 24px;
+				weight: 400;
+			}
+			padding-bottom: 20px;
+
+			span {
+				font-weight: 800;
+			}
+		}
+	}
+
+	&__bg {
+		position: relative;
+		width: 450px;
+		height: 450px;
+
+		&::after {
+			background: url("../img/about-bg.png");
+			background-size: contain;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			animation: rotating-letters 30s linear infinite;
+		}
+	}
+
+	&__btn {
+		position: relative;
+		width: 46px;
+		height: 46px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+
+		@include hover {
+			&:hover:after,
+			&:focus:after {
+				right: 5px;
+			}
+		}
+	}
+
+	@media (max-width: $lg) {
+		&__bg {
+			margin: 0 auto;
+		}
+
+		&__text-content {
+			@include make-col(12);
+
+			text-align: center;
+		}
+	}
+
+	@media (max-width: $md) {
+		padding: 50px 0;
+
+		&__text-content {
+			p {
+				font-size: 14px;
+			}
+		}
+
+		&__bg{
+			width: 280px;
+			height: 280px;
+		}
+	}
+}

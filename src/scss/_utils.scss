@@ -1,0 +1,29 @@
+.button {
+	position: relative;
+	width: 46px;
+	height: 46px;
+	cursor: pointer;
+
+	&::before {
+		position: absolute;
+		content: "";
+		right: 0;
+		top: 0;
+		width: 46px;
+		height: 46px;
+		background: url("../img/btn-bg.png") no-repeat;
+	}
+
+	&::after {
+		position: absolute;
+		content: "";
+		right: 15px;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 36px;
+		height: 16px;
+		background: url("../icons/arrow.svg") no-repeat;
+		fill: $color-default-white;
+		transition: 0.3s;
+	}
+}

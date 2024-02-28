@@ -1,0 +1,15 @@
+.logo {
+	display: block;
+
+	@media (max-width: $lg) {
+        img {
+            width: 140px;
+        }
+	}
+
+	@media (max-width: $md) {
+        img {
+            width: 140px;
+        }
+	}
+}
